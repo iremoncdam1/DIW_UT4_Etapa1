@@ -1,63 +1,214 @@
-/* Variables de colores*/
-
+/* Variables*/
 :root {
     --secondary-color:#ff1616;
+    --font-sans: Helvetica, Arial, sans-serif;
+    --font-serif: Georgia, Times, serif;
 }
 
-/* -------   ESTILOS GENERALES A TODAS LAS PÁGINAS   ------- */
+/* -----------------------------------------------   ESTILOS GENERALES A TODAS LAS PÁGINAS   ----------------------------------------------- */
 
 body {
     margin: 0;
 }
 
 /*HEADER*/
-header{
+.header {
+    font-family: var(--font-sans);
     background: black;
     color: white;
     text-align: center;
     padding: 10px 0 0 0;
 }
-header .logo{
+.header__logo {
     height: 70px;
 }
-header h1{
-    font-size: 0.8rem;
+.header__titulo {
+    font-size: 14px;
 }
 header ul, li{
     list-style: none;
     padding: 0 0 15px 0;
     margin: 0;
-    font-size: 0.7rem;
+    font-size: 14px;
 }
-header a{
+.header__opcion {
     color: white;
     text-decoration: none;
+    font-weight: lighter;
 }
-
-
+.header__opcion.active {
+    font-weight: bold;
+    font-style: italic;
+}
 footer{
     background: black;
     color: white;
     height: 50px;
     padding: 40px 0;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 15px;
 }
 
-
-
-/* -------   PÁGINA DE INICIO   ------- */
 .enlaceRojo{
-    color: var(--secondary-color);
+    text-decoration: none;
+    color: var(--secondary-color); /* Ponemos el color del texto de los enlaces en rojo */
 }
 .enlaceRojo:hover{
-    text-decoration: underline;
+    text-decoration: underline; /* Hacemos que cuando el usuario pase el ratón por encima del enlace, salga subrayado */
+}
+main { 
+    padding: 0 300px;
+}
+.titulo {
+    font-family: var(--font-sans);
+    font-weight: 70;
+    font-size: 45px;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center; /* Centra los titulos de las páginas al medio */
 }
 
+
+
+
+
+/* -----------------------------------------------   PÁGINA DE INICIO   ----------------------------------------------- */
+
 .page-home main {
-    padding-left: 300px;
-    padding-right: 300px;
+    padding: 0 450px;
+    font-family: var(--font-sans);
 }
-.page-home main ul, li{
+
+.cabecera__enlace {
+   margin: 0;
+}
+
+.cabecera__fecha {
+    margin-top: 0;
+ }
+
+.cabecera__imagen{
+    max-width: 100%;
+    width: 100%;
+}
+.cabecera__pieFoto {
+    text-align: right;
+}
+
+.seccion {
+    margin-bottom: 40px;
+    line-height: 1.5; 
+}
+.seccion__titulo {
+    font-weight: 100;
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 0;
+}
+.seccion__lista li {
     list-style-type: square;
+    font-size: 16px;
 }
+.seccion__video{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.seccion__video__pie {
+    align-items: right; 
+    align-content: right;
+    font-size: 12px; 
+    text-align: right; 
+    color: rgba(0, 0, 0, 0.7); 
+}
+
+.pieArticulo {
+    background-color: #eeeeee; /* Le ponemos el fondo gris */
+    text-align: center; /* Centramos el texto */
+}
+
+.trayectoriaAutora {
+    margin: 0 230px; 
+    align-content: center;
+}
+.trayectoriaAutora__imagen { 
+    border-radius: 50%; /* Hacemos el borde redondeado para hacerla redonda */
+    display: block; /* Permite usar margin auto */
+    margin: 0 auto; /* Centramos la imagen */
+}
+.trayectoriaAutora__info{ 
+    line-height: 1.5;  
+}
+
+
+
+
+
+
+
+
+/* -----------------------------------------------   PÁGINA DE TIPOS DE ROBOTS   ----------------------------------------------- */
+
+.page-tipos main {
+    padding: 0 650px;
+    font-family: var(--font-sans);
+}
+
+blockquote {
+    background-color: #eeeeee; 
+    border-left: 5px solid var(--secondary-color); 
+    padding: 15px 20px;
+    line-height: 1.5; 
+    font-family: var(--font-serif);
+}
+
+blockquote cite {
+    text-align: left; 
+
+}
+
+
+
+.page-tipos main ul > li  {
+    list-style-image: url('../img/icon-robot.png'); /* Ponemos el icono del robot como simbolo de la lista principal */
+    font-size: 14px;
+}
+
+.page-tipos main ul ul > li {
+    list-style-image: none; /* Elimina el icono de robot */
+    list-style-type: square; /* Se pone el simbolo cuadrado */
+    padding-top: 10;
+}
+
+.page-tipos main ul ul ul > li {
+    list-style-type: disc; /* Se pone el simbolo redondo otra vz para la última lista */
+    padding-bottom: 0;
+}
+
+
+
+/* -----------------------------------------------   PÁGINA DE ROBOTS DE FICCIÓN   ----------------------------------------------- */
+.page-ficcion main {
+    padding: 0 370px;
+    font-family: var(--font-sans);
+} 
+
+.robot {
+    margin-bottom: 40px;
+}
+.robot__title {
+    font-size: 24px;
+}
+.robot__imgContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.robot__imgContainer__img {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
